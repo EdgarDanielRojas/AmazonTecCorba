@@ -21,13 +21,13 @@
         <h1 class="text-center">Compra del Album <%= album%></h1>
         <h3 class="text-center">Costo: $<%= costo%></h3>
         <div class="text-center">
-            <img src='../amazonTecReloaded/img/<%=id%>.jpg' height="300" width="300" alt='Album <%=album%>' class='img-thumbnail'>
+            <img src='../amazonTecReloadedCorba/img/<%=id%>.jpg' height="300" width="300" alt='Album <%=album%>' class='img-thumbnail'>
         </div>
         <br>
         <div class="alert alert-primary text-center" role="alert">
           Sign in para poder comprar o Registrese como nuevo usuario.
         </div>
-            <form action='../amazonTecReloaded/amazon' method='get' class='form=inline'>
+            <form action='../amazonTecReloadedCorba/amazon' method='get' class='form=inline'>
                 <input type='hidden' name="id" value='<%=id%>'>
                 <div class="form=group">
                     <label class="" for="Email">Email:</label>

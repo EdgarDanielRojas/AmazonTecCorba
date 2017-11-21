@@ -12,11 +12,11 @@
     <div class="container">
         <h1 class="text-center">Cancion <%= datos%></h1>
         <div class="text-center">
-            <img src='../amazonTecReloaded/img/<%=id%>.jpg' height="300" width="300" class='img-thumbnail'>
+            <img src='../amazonTecReloadedCorba/img/<%=id%>.jpg' height="300" width="300" class='img-thumbnail'>
             <br>
             <audio controls class='text-center'>
-                <source src='../amazonTecReloaded/audio/<%=datos%>.mp3' type='audio/mpeg'>
-                <source src='../amazonTecReloaded/audio/<%=datos%>.wav' type='audio/wav'>
+                <source src='../amazonTecReloadedCorba/audio/<%=datos%>.mp3' type='audio/mpeg'>
+                <source src='../amazonTecReloadedCorba/audio/<%=datos%>.wav' type='audio/wav'>
             </audio>
         </div>
         

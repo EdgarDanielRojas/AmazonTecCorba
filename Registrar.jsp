@@ -22,7 +22,7 @@
         <div class="alert alert-info text-center" role="alert">
           Llene todos los campos para continuar
         </div>
-            <form action='../amazonTecReloaded/amazon' method='get' class=''>
+            <form action='../amazonTecReloadedCorba/amazon' method='get' class=''>
                 <input type='hidden' name="id" value='<%=id%>'>
                 <div class="form-group">
                     <label class="" for="Email">Email:</label>

@@ -32,7 +32,7 @@ function UpdateInfo()
         <h1 class="text-center">Compra del Album <%= album%></h1>
         
         <div class="text-center">
-            <img src='../amazonTecReloaded/img/<%=id%>.jpg' height="300" width="300" alt='Album <%=album%>' class='img-thumbnail'>
+            <img src='../amazonTecReloadedCorba/img/<%=id%>.jpg' height="300" width="300" alt='Album <%=album%>' class='img-thumbnail'>
         </div>
         <br>
         <h5 class="text-center">Email: <%= email%></h5>
@@ -41,7 +41,7 @@ function UpdateInfo()
         <h5 class="text-center">No. de Tarjeta: <%= notarjeta%></h5>
         <h5 class="text-center">Album: <%= album%></h5>
         <h5 class="text-center">Costo: $<%= costo%></h5>
-        <form action='../amazonTecReloaded/amazon' method='get' class='form=inline'>
+        <form action='../amazonTecReloadedCorba/amazon' method='get' class='form=inline'>
                 <input type='hidden' name="id" value='<%=id%>'>
                 <input type='hidden' name="email" value='<%=email%>'>
                 <label class="" for="cantidad">Cantidad:</label>

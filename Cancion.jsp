@@ -22,7 +22,7 @@
     <div class="container">
         <h1 class="text-center">Canciones del Album <%= album%></h1>
         <div class="text-center">
-            <img src='../amazonTecReloaded/img/<%=id%>.jpg' height="300" width="300" alt='Album <%=album%>' class='img-thumbnail'>
+            <img src='../amazonTecReloadedCorba/img/<%=id%>.jpg' height="300" width="300" alt='Album <%=album%>' class='img-thumbnail'>
         </div>
         <table class="table table-hover">
             <thead class="thead-default">
@@ -49,7 +49,7 @@
                         funcWrite("<th scope='row'>"+counter+"</th>",out);
                         
                         funcWrite("<td>",out);
-                        funcWrite("<a href='../amazonTecReloaded/CancionSolita.jsp?cancion="+nombre+"&id="+id+"'>",out);
+                        funcWrite("<a href='../amazonTecReloadedCorba/CancionSolita.jsp?cancion="+nombre+"&id="+id+"'>",out);
                         funcWrite(nombre,out);
                         funcWrite("</a>",out);
                         funcWrite("</td>",out);
@@ -57,8 +57,8 @@
                         funcWrite("<td>"+duracion+"</td>",out);
                         funcWrite("<td>",out);
                         funcWrite("<audio controls>",out);
-                        funcWrite("<source src='../amazonTecReloaded/audio/"+nombre+".mp3' type='audio/mpeg'",out);
-                        funcWrite("<source src='../amazonTecReloaded/audio/"+nombre+".wav' type='audio/wav'",out);
+                        funcWrite("<source src='../amazonTecReloadedCorba/audio/"+nombre+".mp3' type='audio/mpeg'",out);
+                        funcWrite("<source src='../amazonTecReloadedCorba/audio/"+nombre+".wav' type='audio/wav'",out);
                         funcWrite("</audio>",out);
                         funcWrite("</td>",out);
                         funcWrite("</tr>",out);

@@ -34,14 +34,14 @@
                 cantidad = secondTokenizer.nextToken();
                 funcWrite("<div class='col-lg-3 col-md-4 col-sm-12'>",out);
                 funcWrite("<div class='text-center'>",out);
-                funcWrite("<a href='../amazonTecReloaded/amazon?bIngresado=Consulta Canciones&album="+nombre+"&id="+id+"'>",out);
-                funcWrite("<img src='../amazonTecReloaded/img/"+id+".jpg' height='200' width='200' alt='Album "+nombre+"' class='img-thumbnail'>",out);
+                funcWrite("<a href='../amazonTecReloadedCorba/amazon?bIngresado=Consulta Canciones&album="+nombre+"&id="+id+"'>",out);
+                funcWrite("<img src='../amazonTecReloadedCorba/img/"+id+".jpg' height='200' width='200' alt='Album "+nombre+"' class='img-thumbnail'>",out);
                 funcWrite("<br>",out);
                 funcWrite("<p>"+nombre+"</p>",out);
                 funcWrite("</a>",out);
                 funcWrite("<p>"+artista+"</p>",out);
                 funcWrite("<p>"+ano+"</p>",out);
-                funcWrite("<a href='../amazonTecReloaded/amazon?bIngresado=Comprar Album&album="+nombre+"&id="+id+"'>",out);
+                funcWrite("<a href='../amazonTecReloadedCorba/amazon?bIngresado=Comprar Album&album="+nombre+"&id="+id+"'>",out);
                 funcWrite("<button type='button' class='btn btn-outline-info'>Precio: $"+precio+"0</button>",out);
                 funcWrite("</a>",out);
                 funcWrite("<br><br>",out);

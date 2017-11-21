@@ -1,0 +1,35 @@
+module AmazonTecApp
+{
+interface AmazonTec
+    {
+        string obtenerMensaje(in string mensaje);
+        string altaUsuario(in string email,in string nombre,in string direccion,in string notarjeta,in string tarjeta,in string password,in string telefono)  ;
+	
+	   	string idCliente(in string email)  ;
+	
+	  void actualizarInventario(in string album,in string cantidad)  ;
+	
+	  string infoDiscoVenta(in string album)  ;
+		
+	  string nombreCliente(in string id)  ;
+		
+	  string compra(in string album,in string cliente,in string cantidad)  ;
+		
+	  string infoAlbum(in string id)  ;
+		
+	  string verifyUser(in string email,in string password)  ;
+		
+	  string obtenerCanciones(in string album)  ;
+		
+	  string obtenerArtista(in string id)  ;
+		
+	  string obtenerId(in string artista)  ;
+		
+	  string obtenerCosto(in string id)  ;
+	
+	  string obtenerAlbums(in string artista)  ;
+		
+	  string obtenerCatalogo()  ;
+        //oneway void shutdown();
+    };
+};

@@ -1,11 +1,7 @@
-package amazonModel;
+/** Implmentacion de Mensaje **/
 
-import java.io.PrintWriter;
-import java.io.BufferedReader;
-import java.io.FileWriter;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.FileNotFoundException;
+import AmazonTecApp.*;
+import org.omg.CORBA.*;
 import java.util.StringTokenizer;
 
 import java.sql.DriverManager;
@@ -17,16 +13,23 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-
-public class AmazonADjdbc
+public class AmazonTecObject extends AmazonTecPOA
 {
+    private ORB orb;
     private Connection conexion;
     private Statement statement;
     
     private AlbumDP albumdp;
     private String error="none";
-    public AmazonADjdbc()
+    
+    public void setORB(ORB orb_val)
     {
+        orb = orb_val;
+    }
+    
+    public AmazonTecObject()
+    {
+    	//super();
         try
         {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -53,9 +56,15 @@ public class AmazonADjdbc
             System.out.println("Error: "+sqle);
             error="Found 4";
         }
+        
     }
     
-    public String altaUsuario(String email,String nombre, String direccion, String notarjeta, String tarjeta, String password, String telefono){
+    public String obtenerMensaje(String mensaje)
+    {
+        return "Mensaje del Cliente: " + mensaje + "\nMensaje del Server CORBA: Hola Cliente CORBA ...";
+    }
+    
+     public String altaUsuario(String email,String nombre, String direccion, String notarjeta, String tarjeta, String password, String telefono) {
     	String resultado;
     	String insert = "INSERT INTO cliente(email,nombre,direccion,numerodetarjeta,tarjeta,password,telefono) VALUES('"+email+"','"+nombre+"','"+direccion+"','"+notarjeta+"','"+tarjeta+"','"+password+"','"+telefono+"');";
     	try{
@@ -443,6 +452,7 @@ public class AmazonADjdbc
             statement.close();
             
             System.out.println(conexion.nativeSQL(query));
+            System.out.println(datos);
         }
         catch(SQLException sqle)
         {
@@ -507,12 +517,12 @@ public class AmazonADjdbc
         artista= obtenerId(artista);
         query = "SELECT * FROM album WHERE artista="+artista+";";
         //return query+error;
+        
         try
         {
             // 1. Abrir archivo
             //archivoEntrada = new BufferedReader(new FileReader("Clientes.txt"));
             statement = conexion.createStatement();
-            
             // 2. Procesar datos
             //while(archivoEntrada.ready())
             //	datos = datos + archivoEntrada.readLine() + "\n";
